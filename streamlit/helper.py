@@ -10,7 +10,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
 from nltk.corpus import stopwords
  
-model_path = "E:\\Data_projects\\NLP\\quora\\pickle_of_tf_models\\tfidf.pkl"
+model_path = "tfidf.pkl"
 with open(model_path, 'rb') as file:
     Tf = pickle.load(file)
 #Tf = pickle.load(open('tfidf.pkl','rb'))
