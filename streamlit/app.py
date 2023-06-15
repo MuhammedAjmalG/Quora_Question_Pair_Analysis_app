@@ -1,0 +1,23 @@
+import streamlit as st
+import helper
+import pickle
+
+
+model_path = "E:\\Data_projects\\NLP\\quora\\pickle_of_tf_models\\rf_tf_model.pkl"
+with open(model_path, 'rb') as file:
+    model = pickle.load(file)
+
+
+st.header('Duplicate Question Pairs')
+
+q1 = st.text_input('Enter question 1')
+q2 = st.text_input('Enter question 2')
+
+if st.button('Find'):
+    query = helper.query_point_creator(q1,q2)
+    result = model.predict(query)[0]
+
+    if result:
+        st.header('Duplicate')
+    else:
+        st.header('Not Duplicate')
