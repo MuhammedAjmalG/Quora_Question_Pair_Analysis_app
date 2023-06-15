@@ -3,7 +3,7 @@ import helper
 import pickle
 
 
-model_path = "E:\\Data_projects\\NLP\\quora\\pickle_of_tf_models\\rf_tf_model.pkl"
+model_path = "rf_tf_model.pkl"
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
