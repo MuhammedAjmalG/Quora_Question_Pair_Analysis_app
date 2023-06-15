@@ -1,11 +1,14 @@
 import streamlit as st
 import helper
 import pickle
+import xgboost as xgb
+
+model = xgb.Booster(model_file='xgb_tf_model.pkl')
 
 
-model_path = "rf_tf_model.pkl"
+'''model_path = "rf_tf_model.pkl"
 with open(model_path, 'rb') as file:
-    model = pickle.load(file)
+    model = pickle.load(file)'''
 
 
 st.header('Duplicate Question Pairs')
