@@ -1,7 +1,7 @@
 import streamlit as st
 import helper
 import pickle
-import xgboost as xgb
+import xgboost as XGBClassifier
 
 model = xgb.Booster(model_file='xgb_tf_model.pkl')
 
